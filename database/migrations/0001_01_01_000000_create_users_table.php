@@ -12,19 +12,20 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kontak', function (Blueprint $table) {
-            $table->id('kontak_id')->primary();
-            $table->string('kontak_no')->unique();
+            $table->string('kontak_no')->primary();
             $table->string('client_name');
             $table->string('OTR');
             $table->string('slug');
+            $table->timestamps();
         });
 
-        Schema::create('jadwal_ansuran', function (Blueprint $table) {
-            $table->id('ansuran_id')->primary();
-            $table->foreignId('kontak_id');
-            $table->string('ansuran_ke');
-            $table->string('ansuran_per_bulan');
+        Schema::create('jadwal_angsuran', function (Blueprint $table) {
+            $table->id('angsuran_id')->primary();
+            $table->string('kontak_no');
+            $table->string('angsuran_ke');
+            $table->string('angsuran_per_bulan');
             $table->date('tanggal_jatuh_tempo');
+            $table->timestamps();
         });
     }
 

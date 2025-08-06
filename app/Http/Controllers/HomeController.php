@@ -23,6 +23,7 @@ class HomeController extends Controller
     public function hitung(Request $request)
     {
         $otr = $request->otr;
+        $odp = $request->dp;
         $dp = $otr * ($request->dp / 100);
         $jangkaWaktu = $request->jangka_waktu;
         $pokokUtang = $otr - $dp;
@@ -43,6 +44,8 @@ class HomeController extends Controller
             'angsuran' => round($angsuran),
             'pokok_utang' => $pokokUtang,
             'bunga' => $bunga * 100,
+            'jangkawaktu' => $jangkaWaktu,
+            'odp' => $odp,
         ]);
     }
 }

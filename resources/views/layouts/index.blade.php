@@ -69,6 +69,8 @@
                                 <p>Pokok Utang: <strong>Rp {{ number_format($pokok_utang, 0, ',', '.') }}</strong></p>
                                 <p>Bunga: <strong>{{ $bunga }}%</strong></p>
                                 <p>Angsuran per bulan: <strong>Rp {{ number_format($angsuran, 0, ',', '.') }}</strong></p>
+                                <p>Down Payment: <strong> {{ $odp }}%</strong></p>
+                                <p>Jangka Waktu angsuran: <strong> {{ $jangkawaktu }} Bulan</strong></p>
                             @endisset
                         </div>
                     </div>

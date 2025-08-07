@@ -4,14 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Article;
-use App\Models\Highlight;
-use App\Models\BankDesign;
-use App\Models\CategoryArticle;
-use App\Models\CategoryBankDesign;
-use App\Models\Feedback;
-use App\Models\Kontak;
-use App\Models\Report;
+
 
 class HomeController extends Controller
 {
